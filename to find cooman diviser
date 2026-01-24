@@ -1,0 +1,12 @@
+def recurgcd(a,b):
+    low = min(a,b)
+    high = max(a,b)
+    if low == 0:
+        return high
+    elif low == 1:
+        return 1
+    else:
+        return recurgcd(low, high % low)
+n1=int(input("enter the number 1:"))
+n2=int(input("enter the number 2:"))
+print(recurgcd(n1,n2))
